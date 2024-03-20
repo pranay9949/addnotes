@@ -30,7 +30,7 @@ class Notes extends Component{
    ))})
   }
     render(){
-      const {notesObj}=this.state
+      const {notesObj,text}=this.state
       console.log(notesObj)
         return(
           <div>
@@ -39,7 +39,7 @@ class Notes extends Component{
            </nav>
            <div className="container">
             <form className="input-cont" onSubmit={this.onSubmit}>
-              <input type="text" placeholder="take a note.." onChange={this.onInputChange}/>
+              <input type="text" value={text}placeholder="take a note.." onChange={this.onInputChange}/>
             </form>
             <div className="note-items">
 
